@@ -212,7 +212,7 @@
     \item \TL
       \begin{itemize}
         \item 跨平台：Windows, Linux, Mac OS X (\MacTeX)
-        \item 每年一个新版本发布，当前 \TL 2018
+        \item 每年一个新版本发布，当前 \TL 2019
       \end{itemize}
     \item \MiKTeX
       \begin{itemize}
@@ -280,7 +280,6 @@ sudo chown yourname:yourname /usr/local/texlive
   https://mirrors.tuna.tsinghua.edu.cn/CTAN/systems/texlive/tlnet/
         \end{lstlisting}
       \end{itemize}
-\item 截图\dots
 \end{itemize}
 \end{frame}
 
@@ -352,7 +351,7 @@ sudo chown yourname:yourname /usr/local/texlive
 \end{frame}
 
 \begin{frame}[fragile]
-  \frametitle{网络安装后配置（仅 Linux）}
+  \frametitle{网络安装后配置（仅部分 Linux）}
   \begin{itemize}
     \item
       添加环境变量到 \nolinkurl{~/.bash_profile} 文件：
@@ -376,7 +375,7 @@ texdoc texlive-zh
   \item
     \XeTeX\ 系统字体配置
     \begin{lstlisting}[language=bash]
-cp /usr/local/texlive/2018/texmf-var/fonts/conf/texlive-fontconfig.conf \
+cp /usr/local/texlive/2019/texmf-var/fonts/conf/texlive-fontconfig.conf \
   /etc/fonts/conf.d/09-texlive.conf
 fc-cache -fsv
     \end{lstlisting}
