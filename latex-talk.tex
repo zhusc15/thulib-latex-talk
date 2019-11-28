@@ -52,9 +52,8 @@
 \usepackage{xspace}
 \usepackage{amsmath}
 \usepackage{calligra}
-\usepackage{cclicenses} % CC symbols
 \usepackage{fontspec}
-%\usepackage[UTF8]{ctex}
+\usepackage{ccicons}
 \usepackage{hologo}
 \usepackage{colortbl}
 \usepackage{pstricks}
@@ -62,11 +61,20 @@
 \usepackage{hyperxmp}
 \usepackage{booktabs}
 \usepackage{tipa}
+\usepackage{multicol}
 \usepackage[normalem]{ulem}
 \usepackage{stackengine}
+\usepackage{fontawesome}
+
+\lstdefinestyle{style@inline}{
+  basicstyle   = \ttfamily,
+  keepspaces   = true
+}
+\lstMakeShortInline[style=style@inline]|
+
 \hypersetup{
 pdfauthor={Harry Chen, Justin Wong, Alick Zhao},
-pdfcopyright={Copyright (C) 2015-2018 by Alick Zhao, Justin Wong and Harry Chen.
+pdfcopyright={Copyright (C) 2015-2019 by Alick Zhao, Justin Wong and Harry Chen.
 Licensed under CC-BY-SA 4.0. Some rights reserved.},
 pdflicenseurl={http://creativecommons.org/licenses/by-sa/4.0/},
 }
@@ -96,13 +104,21 @@ pdflicenseurl={http://creativecommons.org/licenses/by-sa/4.0/},
 \newcommand{\BibTeX}{\hologo{BibTeX}}
 \newcommand{\XeTeX}{\hologo{XeTeX}}
 \newcommand{\pdfTeX}{\hologo{pdfTeX}}
+\newcommand{\LuaTeX}{\hologo{LuaTeX}}
 \renewcommand{\CTeX}{C\TeX}
 \newcommand{\MiKTeX}{\hologo{MiKTeX}}
 \newcommand{\MacTeX}{Mac\hologo{TeX}}
 \newcommand{\beamer}{\textsc{beamer}}
+\newcommand{\XeLaTeX}{\hologo{Xe}\kern-.13em\LaTeX{}}
+\newcommand{\pdfLaTeX}{pdf\LaTeX{}}
+\newcommand{\LuaLaTeX}{Lua\LaTeX{}}
+
 \def\TeXLive{\TeX{} Live\xspace}
 \let\TL=\TeXLive
 \newcommand{\ThuThesis}{\textsc{ThuThesis}\xspace}
+
+\newcommand\link[1]{\href{#1}{\faLink}}
+\newcommand\pkg[1]{\texttt{#1}}
 
 % From thuthesis user guide.
 \def\cmd#1{\texttt{\color{DarkBlue}\footnotesize $\backslash$#1}}
@@ -137,7 +153,7 @@ pdflicenseurl={http://creativecommons.org/licenses/by-sa/4.0/},
 % - Keep it simple, no one is interested in your street address.
 
 \date[图书馆专题培训讲座] % (optional)
-{2019 年 4 月}
+{2019 年 1 月}
 
 \subject{LaTeX, paper, ThuThesis}
 
@@ -197,15 +213,14 @@ pdflicenseurl={http://creativecommons.org/licenses/by-sa/4.0/},
     \item 本幻灯片源码：
       \begin{itemize}
         \item \url{https://github.com/tuna/thulib-latex-talk}
-        % \item \url{https://www.overleaf.com/read/bdynvrzpqmwq}
-        % \item Overleaf 版本过老
       \end{itemize}
-    \item 本幻灯片基于：
+    \item 本幻灯片参考：
       \begin{itemize}
         \item \url{http://github.com/alick/fad-texlive-talk}
+        \item \url{https://github.com/stone-zeng/latex-talk}
         \item \ThuThesis{}使用向导 v3.0
       \end{itemize}
-    \item 许可证：CC BY-SA 4.0 Unported \cc\ccby\ccsa
+    \item 许可证：CC BY-SA 4.0 Unported \ccbysa
   \end{itemize}
 \end{frame}
 

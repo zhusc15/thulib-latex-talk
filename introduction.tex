@@ -20,8 +20,8 @@
         \end{itemize}
       \item \LaTeX\ (\textipa{/'la:tEx/}, \textipa{/'leItEk/})
         \begin{itemize}
-          \item Leslie Lamport 开发
-          \item 在 \TeX 的基础上的宏包， 降低使用门槛
+          \item Leslie Lamport 开发的一种 \TeX{} 格式
+          \item 在 \TeX 的基础上提供宏包， 降低使用门槛
           \item 极其丰富的宏包，提供扩展功能
           \item 广泛用于学术界，期刊会议论文模板
           \item 大学学位论文模板，如 \ThuThesis
@@ -283,82 +283,15 @@ sudo chown yourname:yourname /usr/local/texlive
 \end{itemize}
 \end{frame}
 
-\begin{frame}
-  \begin{figure}[h]
-    \centering
-    \includegraphics[scale=0.7]{install-tl-0.png}
-  \end{figure}
-\end{frame}
-
-\begin{frame}
-  \begin{figure}[h]
-    \centering
-    \includegraphics[scale=0.7]{install-tl-1.png}
-  \end{figure}
-\end{frame}
-
-\begin{frame}
-  \begin{figure}[h]
-    \centering
-    \includegraphics[height=.25\textheight]{simple3-dir.png}\\
-    \includegraphics[scale=0.5]{install-tl-2.png}
-  \end{figure}
-\end{frame}
-
-\begin{frame}
-  \begin{figure}[h]
-    \centering
-    \includegraphics[scale=0.7]{install-tl-3.png}
-  \end{figure}
-\end{frame}
-
-% 准备安装
-
-\begin{frame}
-  \begin{figure}[h]
-    \centering
-    \includegraphics[scale=0.7]{install-tl-4.png}
-  \end{figure}
-\end{frame}
-
-% 安装进行中
-\begin{frame}
-  \begin{figure}[h]
-    \centering
-    \includegraphics[scale=0.7]{install-tl-5.png}
-  \end{figure}
-\end{frame}
-
-% 安装后期
-\begin{frame}
-  \begin{figure}[h]
-    \centering
-    \includegraphics[scale=0.5]{simple8-postinstall.png}
-  \end{figure}
-\end{frame}
-
-% 安装完成
-\begin{frame}
-  \begin{figure}[h]
-    \centering
-    \includegraphics[width=.5\textwidth]{simple9-installed.png}%
-    \hspace{2em}
-    \includegraphics[width=.3\textwidth]{simple10-close.png}
-  \end{figure}
-
-  \centering Windows 上安装过程比较慢，尤其是最后的生成索引阶段，请耐心等待
-
-\end{frame}
-
 \begin{frame}[fragile]
   \frametitle{网络安装后配置（仅部分 Linux）}
   \begin{itemize}
     \item
       添加环境变量到 \nolinkurl{~/.bash_profile} 文件：
       \begin{lstlisting}[language=bash]
-export PATH=/usr/local/texlive/2018/bin/x86_64-linux:$PATH
-export MANPATH=/usr/local/texlive/2018/texmf/doc/man:$MANPATH
-export INFOPATH=/usr/local/texlive/2018/texmf/doc/info:$INFOPATH
+export PATH=/usr/local/texlive/2019/bin/x86_64-linux:$PATH
+export MANPATH=/usr/local/texlive/2019/texmf/doc/man:$MANPATH
+export INFOPATH=/usr/local/texlive/2019/texmf/doc/info:$INFOPATH
       \end{lstlisting}
   \item
     打开 \TeXLive 指南中文版 ``texlive-zh-cn.pdf''，
@@ -370,7 +303,7 @@ texdoc texlive-zh
 \end{frame}
 
 \begin{frame}[fragile]
-  \frametitle{网络安装后配置（仅 Linux）}
+  \frametitle{网络安装后配置（仅部分 Linux）}
   \begin{itemize}
   \item
     \XeTeX\ 系统字体配置
@@ -382,12 +315,12 @@ fc-cache -fsv
   \item 让系统的包管理器知道 TeX Live 已经装过了，所以安装一个 dummy package
     \begin{itemize}
       \item Arch Linux 用户装 AUR 里的 \verb|texlive-dummy|
-      \item Debian/Ubuntu 用户参照手册做一个包即可
-        \url{https://www.tug.org/texlive/debian.html\#vanilla}
-      \item Feodra 用户可以在
-        \url{https://copr.fedoraproject.org/coprs/fatka/texlive-dummy/} 下载
+      \item Debian/Ubuntu 用户参照手册做一个包即可 \link{https://www.tug.org/texlive/debian.html\#vanilla}
+      \item Feodra 用户可以直接下载 \link{https://copr.fedoraproject.org/coprs/fatka/texlive-dummy/}
     \end{itemize}
-  \item 教程可参考: \url{http://zhuanlan.zhihu.com/LaTeX/20069414}
+  \item 教程可参考:
+    \link{http://zhuanlan.zhihu.com/LaTeX/20069414}
+    \link{https://stone-zeng.github.io/2018-05-13-install-texlive-ubuntu/}
   \end{itemize}
 \end{frame}
 
@@ -431,15 +364,15 @@ fc-cache -fsv
 
 \begin{frame}{后期安装宏包}
   \begin{exampleblock}{很多时候需要自己安装宏包}
-    \vspace*{-3mm}
+    % \vspace*{-3mm}
     \begin{itemize}
       \item 发行版没有预装
       \item 宏包需要更新
     \end{itemize}
   \end{exampleblock}
-  \vspace*{-3mm}
+  % \vspace*{-3mm}
   \begin{exampleblock}{\TL}
-    \vspace*{-3mm}
+    % \vspace*{-3mm}
     \begin{itemize}
       \item 开始菜单里找 Tex Live Manager
       \item 设置仓库地址 \texttt{tlmgr option repository} {\footnotesize\ttfamily
@@ -447,9 +380,9 @@ fc-cache -fsv
       \item 使用 \texttt{tlmgr install <pkgname>}命令
     \end{itemize}
   \end{exampleblock}
-  \vspace*{-3mm}
+  % \vspace*{-3mm}
   \begin{exampleblock}{\CTeX 或 \MiKTeX}
-    \vspace*{-3mm}
+    % \vspace*{-3mm}
     \begin{itemize}
       \item 开始菜单里找 CTeX / MiKTeX -> Package Manager
       \item 在 WinEdt 里 MiKTex Options -> Packages
