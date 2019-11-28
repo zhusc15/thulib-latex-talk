@@ -1,4 +1,4 @@
-\documentclass[xcolor=table,dvipsnames,svgnames,aspectratio=169,fontset=none]{ctexbeamer}
+\documentclass[xcolor=table,dvipsnames,svgnames,aspectratio=169,fontset=fandol,punct=kaiming]{ctexbeamer}
 % Author: alick<alick9188@gmail.com>
 % Author: justin <justin.w.xd@gmail.com>
 % Author: Harry Chen <harry-chen@outlook.com>
@@ -21,13 +21,10 @@
 % modify this file as you see fit and even to delete this copyright
 % notice.
 
-\ctexset{
-    fontset = fandol,
-    punct = kaiming
-}
-
 \usepackage{tikz}
+
 \graphicspath{{fig/}}
+
 \mode<presentation>
 {
   \usetheme{material}
@@ -43,7 +40,6 @@
   \setlength\leftmarginii{1.4em}
   \setlength\leftmarginiii{1.4em}
   \setbeamersize{description width=0.24cm}
-
 }
 
 \usepackage{mflogo} % for \MF, \MP
@@ -60,23 +56,18 @@
 \usepackage{pst-node}
 \usepackage{hyperxmp}
 \usepackage{booktabs}
+\usepackage{qrcode}
 \usepackage{tipa}
 \usepackage{multicol}
 \usepackage[normalem]{ulem}
 \usepackage{stackengine}
 \usepackage{fontawesome}
 
-\lstdefinestyle{style@inline}{
-  basicstyle   = \ttfamily,
-  keepspaces   = true
-}
-\lstMakeShortInline[style=style@inline]|
-
 \hypersetup{
-pdfauthor={Harry Chen, Justin Wong, Alick Zhao},
-pdfcopyright={Copyright (C) 2015-2019 by Alick Zhao, Justin Wong and Harry Chen.
-Licensed under CC-BY-SA 4.0. Some rights reserved.},
-pdflicenseurl={http://creativecommons.org/licenses/by-sa/4.0/},
+  pdfauthor={Harry Chen, Justin Wong, Alick Zhao},
+  pdfcopyright={Copyright (C) 2015-2019 by Alick Zhao, Justin Wong and Harry Chen.
+  Licensed under CC-BY-SA 4.0. Some rights reserved.},
+  pdflicenseurl={http://creativecommons.org/licenses/by-sa/4.0/},
 }
 
 % From thuthesis user guide
@@ -93,11 +84,10 @@ pdflicenseurl={http://creativecommons.org/licenses/by-sa/4.0/},
 \newfontfamily\useTIPAfont{Times New Roman}
 
 % xeCJK conf setup
-%\punctstyle{kaiming}
 \renewcommand\CJKfamilydefault{\CJKsfdefault} % for slides
 
-%\setCJKsansfont{WenQuanYi Micro Hei}
-%\setCJKmonofont{WenQuanYi Micro Hei Mono}
+\setCJKsansfont{WenQuanYi Micro Hei}
+\setCJKmonofont{WenQuanYi Micro Hei Mono}
 
 \renewcommand{\TeX}{\hologo{TeX}}
 \renewcommand{\LaTeX}{\hologo{LaTeX}}
@@ -125,10 +115,6 @@ pdflicenseurl={http://creativecommons.org/licenses/by-sa/4.0/},
 \def\env#1{\texttt{\color{DarkBlue}\footnotesize #1}}
 \def\cmdxmp#1#2#3{\small{\texttt{\color{DarkBlue}$\backslash$#1}\{#2\}\hspace{1em}\\ $\Rightarrow$\hspace{1em} {#3}\par\vskip1em}}
 
-% For debugging.
-% \includeonlyframes{current}
-% \includeonly{introduction}
-
 
 \lstset{
   language=[LaTeX]TeX,
@@ -140,7 +126,11 @@ pdflicenseurl={http://creativecommons.org/licenses/by-sa/4.0/},
 	extendedchars=true,
 	breaklines=true,
 }
-
+\lstdefinestyle{style@inline}{
+  basicstyle   = \ttfamily,
+  keepspaces   = true
+}
+\lstMakeShortInline[style=style@inline]|
 
 \title
 {如何使用 \LaTeX 排版论文}
@@ -152,8 +142,7 @@ pdflicenseurl={http://creativecommons.org/licenses/by-sa/4.0/},
 % - Use the \inst command only if there are several affiliations.
 % - Keep it simple, no one is interested in your street address.
 
-\date[图书馆专题培训讲座] % (optional)
-{2019 年 1 月}
+\date[图书馆专题培训讲座]{2019 年 11 月}
 
 \subject{LaTeX, paper, ThuThesis}
 
@@ -221,6 +210,8 @@ pdflicenseurl={http://creativecommons.org/licenses/by-sa/4.0/},
         \item \ThuThesis{}使用向导 v3.0
       \end{itemize}
     \item 许可证：CC BY-SA 4.0 Unported \ccbysa
+    \item 幻灯片下载 \link{https://stu.cs.tsinghua.edu.cn/\~harry/latex-talk.pdf} \hspace{1em}
+      \qrcode[hyperlink, height=2cm]{https://stu.cs.tsinghua.edu.cn/\~harry/latex-talk.pdf}
   \end{itemize}
 \end{frame}
 
