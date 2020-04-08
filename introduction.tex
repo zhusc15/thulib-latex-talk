@@ -1,3 +1,7 @@
+% !TeX encoding = UTF-8
+% !TeX program = xelatex
+% !TeX root = latex-talk.tex
+
 \section{简介}
 
 \subsection{\TeX 与 \LaTeX}
@@ -212,7 +216,7 @@
     \item \TL
       \begin{itemize}
         \item 跨平台：Windows, Linux, Mac OS X (\MacTeX)
-        \item 每年一个新版本发布，当前 \TL 2019
+        \item 每年一个新版本发布，当前即将迎来 \TL 2020
       \end{itemize}
     \item \MiKTeX
       \begin{itemize}
@@ -263,7 +267,7 @@ install-tl-unx.tar.gz: OK
     \item Windows
       \begin{itemize}
         \item 双击下载的安装程序
-        \item 切换默认仓库为国内镜像：加速网络下载
+        \item 切换默认仓库为国内镜像（如 TUNA）可加速今后升级
       \end{itemize}
     \item Mac OS X
       \begin{itemize}
@@ -362,22 +366,22 @@ fc-cache -fsv
 \end{frame}
 
 
-\begin{frame}{后期安装宏包}
+\begin{frame}{后期安装或更新宏包}
   \begin{exampleblock}{很多时候需要自己安装宏包}
     % \vspace*{-3mm}
     \begin{itemize}
       \item 发行版没有预装
-      \item 宏包需要更新
+      \item 宏包需要更新（尤其是 TeX Live 升级间隔的尴尬时期）
     \end{itemize}
   \end{exampleblock}
   % \vspace*{-3mm}
   \begin{exampleblock}{\TL}
     % \vspace*{-3mm}
     \begin{itemize}
-      \item 开始菜单里找 Tex Live Manager
+      \item （Windows）开始菜单里找 Tex Live Manager
       \item 设置仓库地址 \texttt{tlmgr option repository} {\footnotesize\ttfamily
         https://mirrors.tuna.tsinghua.edu.cn/CTAN/systems/texlive/tlnet}
-      \item 使用 \texttt{tlmgr install <pkgname>}命令
+      \item 使用 \texttt{tlmgr install <pkgname>} 安装或 \texttt{tlmgr update --self --all} 全部更新
     \end{itemize}
   \end{exampleblock}
   % \vspace*{-3mm}
@@ -414,7 +418,7 @@ fc-cache -fsv
       \LaTeX{} 文档对大小写敏感。）
       \lstset{language=[LaTeX]TeX}
       \begin{card} \begin{lstlisting}[basicstyle=\ttfamily]
-\documentclass{ctexart} % 使用 ctex 适配过的 article 文档类
+\documentclass{ctexart} % 使用中文适配的 article 文档类
 \begin{document}
 \TeX{}你好！
 \end{document}

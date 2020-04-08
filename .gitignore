@@ -37,3 +37,5 @@ _minted-latex-talk/
 *.pyg.lst
 *.synctex.gz
 .latex
+
+.vscode/
