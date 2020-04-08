@@ -23,7 +23,7 @@
   \end{figure}
 \end{frame}
 
-\begin{frame}{手动安装\ThuThesis{}}
+\begin{frame}[fragile]{手动安装\ThuThesis{}}
       \begin{columns}
         \begin{column}{.7\textwidth}
   \begin{itemize}
@@ -81,7 +81,7 @@
 \end{description}
 \end{frame}
 
-\begin{frame}{封面}
+\begin{frame}[fragile]{封面}
   使用 |\thusetup| 命令指定论文各类选项：
   \begin{table}[h]
     \centering
@@ -96,14 +96,14 @@
   导师 & |supervisor| & |supervisor*|\\
   副导师 & |associate-supervisor| & |associate-supervisor*|\\
   联合导师 & |joint-supervisor| & |joint-supervisor*|\\
-  日期 & \multicolumn{2}{c|}{|date|}\\
-  密级 & \multicolumn{2}{c|}{|secret-year, secret-level|}\\
-  博后专用 & \multicolumn{2}{c|}{|clc, udc, id, ...|}\hline
+  日期 & \multicolumn{2}{c|}{\texttt{date}}\\
+  密级 & \multicolumn{2}{c|}{\texttt{secret-year, secret-level}}\\
+  博后专用 & \multicolumn{2}{c|}{\texttt{clc, udc, id, ...}}\hline
   \end{tabular}
   \end{table}
 \end{frame}
 
-\begin{frame}{数学}
+\begin{frame}[fragile]{数学}
   \begin{itemize}
     \item 公式示例：\nolinkurl{data/chap01.tex}
     \item \ThuThesis{} 定义了常用的数学环境（需要手工引入 |amsthm| 宏包）：
@@ -116,19 +116,20 @@
   证明 & 推论 & 例子& 练习 & 假设 & 注释 & 问题\\\bottomrule
 \end{tabular}
       \end{table}
+      \item \ThuThesis{} 使用 \pkg{unicode-math} 进行数学输入，注意与传统方式的区别
   \end{itemize}
 \end{frame}
 
 \begin{frame}[fragile]{参考文献}
   \begin{itemize}
-    \item 推荐 \BibTeX
+    \item 使用 \BibTeX
       \begin{itemize}
         \item 使用文献管理软件导出 bib 文件
           \begin{itemize}
             \item Menderley, NoteExpress
           \end{itemize}
         \item 使用 bibtex 生成参考文献列表
-        \item bst 参考文献样式文件：\texttt{thuthesis*.bst}
+        \item 本科生文献翻译/阅读报告参考文献与正文独立
       \end{itemize}
     \item 模板支持两种引用方式：
       \begin{itemize}
@@ -181,7 +182,7 @@
 %   \end{columns}
 % \end{frame}
 
-\begin{frame}{\ThuThesis 问题}
+\begin{frame}[fragile]{\ThuThesis 问题}
     \begin{itemize}
       \item 常见问题
         \begin{itemize}
