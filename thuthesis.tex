@@ -53,11 +53,11 @@
       \begin{itemize}
         \item 解压缩看文档 |README.md|
         \item Windows: 文件夹空白处按Shift+鼠标右键，点击``在此处打开命令行窗口''
-        \item 模板文档类：|make cls|：|thuthesis.dtx| $\Rightarrow$
+        \item 模板文档类：|make cls| 编译 |thuthesis.dtx| $\Rightarrow$
           |thuthesis.cls|
-        \item 论文示例：|make doc|：|main.tex| $\Rightarrow$
+        \item 论文示例：|make doc| 编译 |main.tex| $\Rightarrow$
         |main.pdf|
-        \item 用户手册：|make doc|：|thuthesis.dtx| $\Rightarrow$
+        \item 用户手册：|make doc| 编译 |thuthesis.dtx| $\Rightarrow$
           |thuthesis.pdf|
         \item 更多用法可参考附带的 |Makefile|
       \end{itemize}
@@ -74,7 +74,7 @@
   \begin{lstlisting}[basicstyle=\ttfamily]
 \documentclass[degree=master,degree-type=profession]{thuthesis}
   \end{lstlisting}
-\item[fontset] 指定字体（推荐使用 |windows|，详见 |ctex| 文档）
+\item[fontset] 指定字体（推荐使用 |windows|，详见 \pkg{ctex} 文档）
   \begin{lstlisting}[basicstyle=\ttfamily]
 \documentclass[degree=doctor,fontset=windows]{thuthesis}
   \end{lstlisting}
@@ -98,7 +98,7 @@
   联合导师 & |joint-supervisor| & |joint-supervisor*|\\
   日期 & \multicolumn{2}{c}{\texttt{date}}\\
   密级 & \multicolumn{2}{c}{\texttt{secret-year, secret-level}}\\
-  博后专用 & \multicolumn{2}{c}{\texttt{clc, udc, id, ...}} \bottomrule
+  博后专用 & \multicolumn{2}{c}{\texttt{clc, udc, id, ...}} \\ \bottomrule
   \end{tabular}
   \end{table}
 \end{frame}
