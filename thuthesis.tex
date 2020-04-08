@@ -66,11 +66,11 @@
 
 \begin{frame}[fragile]{模板选项}
 \begin{description}
-\item[degree] 指定学位
+\item[degree] 指定学位类型（本科/硕士/博士/博后）
   \begin{lstlisting}[basicstyle=\ttfamily]
 \documentclass[degree=bachelor]{thuthesis}
   \end{lstlisting}
-\item[degree-type] 学位选项（专硕/学硕格式不同）
+\item[degree-type] 指定学位选项（专硕/学硕格式不同）
   \begin{lstlisting}[basicstyle=\ttfamily]
 \documentclass[degree=master,degree-type=profession]{thuthesis}
   \end{lstlisting}
@@ -109,6 +109,7 @@
     \item \ThuThesis{} 定义了常用的数学环境（需要手工引入 |amsthm| 宏包）：
       \begin{table}[h]
         \centering
+        \footnotesize
 \begin{tabular}{*{7}{l}}\toprule
   axiom & theorem & definition & proposition & lemma & conjecture &\\
   公理 & 定理 & 定义 & 命题 & 引理 & 猜想 &\\\midrule
