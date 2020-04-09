@@ -17,7 +17,7 @@
           \item 生成精美图书的排版系统
           \item 最初由 高德纳 (Donald E.~Knuth) 于 1978 年开发
           \item 发音接近“泰赫”，而非“泰克斯”，
-            Knuth 对此有\stackon[1pt]{强}{\tiny qi\v{a}ng}迫症
+            Knuth 对此有\xpinyin{强}{\useTIPAfont qiang3}迫症
           \item 最新版本为 \TeX\ 3.14159265
           \item 漂亮、美观、稳定、通用
           \item 尤其擅长数学公式排版
@@ -207,7 +207,7 @@
 
 \begin{frame}{如何安装 \hologo{(La)TeX}？}
   \begin{itemize}
-    \item \TeX{}发行版(Distro)
+    \item \TeX{}发行版（Distro）
       \begin{itemize}
         \item \TeX{}实用工具大集合：引擎、宏包、文档等
         \item 常见\TeX{}发行版：
@@ -215,13 +215,13 @@
       \end{itemize}
     \item \TL
       \begin{itemize}
-        \item 跨平台：Windows, Linux, Mac OS X (\MacTeX)
+        \item 跨平台：Windows, Linux, macOS (\MacTeX)
         \item 每年一个新版本发布，当前即将迎来 \TL 2020
       \end{itemize}
     \item \MiKTeX
       \begin{itemize}
-        \item 专为 Windows 开发
-        \item 个人维护，作者失联，新版跳票
+        \item 最早专为 Windows 开发，现亦有 Linux 和 macOS 版本
+        \item 个人维护
       \end{itemize}
     \item \CTeX
       \begin{itemize}
@@ -262,20 +262,21 @@ install-tl-unx.tar.gz: OK
 \end{frame}
 
 \begin{frame}[fragile]
-  \frametitle{下载}
+  \frametitle{安装}
   \begin{itemize}
     \item Windows
       \begin{itemize}
-        \item 双击下载的安装程序
+        \item 解压或挂载下载的 ISO，运行 |install-tl-windows.bat|
         \item 切换默认仓库为国内镜像（如 TUNA）可加速今后升级
       \end{itemize}
-    \item Mac OS X
+    \item macOS
       \begin{itemize}
-        \item \texttt{https://mirrors.tuna.tsinghua.edu.cn/\\CTAN/systems/mac/mactex/MacTeX.pkg}
+        \item 需要下载独立的安装包 \url{https://mirrors.tuna.tsinghua.edu.cn/CTAN/systems/mac/mactex/MacTeX.pkg}
       \end{itemize}
     \item Linux
       \begin{itemize}
-        \item 图形安装界面需要 Perl Tk 模块：
+        \item 不推荐从发行版仓库直接安装（更新缓慢）
+        \item 图形安装界面需要 Perl Tk 模块
           \begin{lstlisting}
 yum install perl-Tk 或 apt-get install perl-tk
 sudo mkdir /usr/local/texlive
@@ -288,7 +289,7 @@ sudo chown yourname:yourname /usr/local/texlive
 \end{frame}
 
 \begin{frame}[fragile]
-  \frametitle{网络安装后配置（仅部分 Linux）}
+  \frametitle{安装后配置（仅 Linux）}
   \begin{itemize}
     \item
       添加环境变量到 \nolinkurl{~/.bashrc} 文件：
@@ -307,7 +308,7 @@ texdoc texlive-zh
 \end{frame}
 
 \begin{frame}[fragile]
-  \frametitle{网络安装后配置（仅部分 Linux）}
+  \frametitle{安装后配置（仅 Linux）}
   \begin{itemize}
   \item
     \XeTeX\ 系统字体配置
@@ -316,13 +317,13 @@ cp /usr/local/texlive/2019/texmf-var/fonts/conf/texlive-fontconfig.conf \
   /etc/fonts/conf.d/09-texlive.conf
 fc-cache -fsv
     \end{lstlisting}
-  \item 让系统的包管理器知道 TeX Live 已经装过了，所以安装一个 dummy package
+  \item 安装一个 dummy package，让系统的包管理器知道 \TL 已经装过了
     \begin{itemize}
       \item Arch Linux 用户装 AUR 里的 \verb|texlive-dummy|
       \item Debian/Ubuntu 用户参照手册做一个包即可 \link{https://www.tug.org/texlive/debian.html\#vanilla}
       \item Feodra 用户可以直接下载 \link{https://copr.fedoraproject.org/coprs/fatka/texlive-dummy/}
     \end{itemize}
-  \item 教程可参考:
+  \item 部分教程可参考:
     \link{http://zhuanlan.zhihu.com/LaTeX/20069414}
     \link{https://stone-zeng.github.io/2018-05-13-install-texlive-ubuntu/}
   \end{itemize}
@@ -381,7 +382,7 @@ fc-cache -fsv
       \item （Windows）开始菜单里找 Tex Live Manager
       \item 设置仓库地址 |tlmgr option repository| {\footnotesize\ttfamily
         https://mirrors.tuna.tsinghua.edu.cn/CTAN/systems/texlive/tlnet}
-      \item 使用 |tlmgr install <pkgname>| 安装或 |tlmgr update --self --all| 全部更新
+      \item |tlmgr install <pkgname>| 安装、 |tlmgr update --self --all| 全部更新
     \end{itemize}
   \end{exampleblock}
   % \vspace*{-3mm}
@@ -425,9 +426,9 @@ fc-cache -fsv
         \end{lstlisting}\end{card}
       \begin{itemize}
         \item Windows 下缺省使用中易字体
-        \item Linux、Mac OS X 下需要注意字体（参见 \pkg{ctex} 文档）
+        \item Linux、macOS 下需要注意字体（参见 \pkg{ctex} 文档）
       \end{itemize}
-    \item 使用 XeLaTeX 引擎编译，得到 PDF 文档
+    \item 使用 \XeLaTeX{} 引擎编译，得到 PDF 文档
       \begin{center}
         \fbox{\textrm \TeX{}\songti 你好！}
       \end{center}
