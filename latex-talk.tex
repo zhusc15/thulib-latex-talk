@@ -64,8 +64,8 @@
 \usepackage{tipa}
 \usepackage{xpinyin}
 \usepackage{multicol}
+\usepackage{datetime2}
 \usepackage[normalem]{ulem}
-\usepackage{stackengine}
 \usepackage{fontawesome}
 
 \hypersetup{
@@ -137,16 +137,11 @@
 }
 \lstMakeShortInline[style=style@inline]|
 
-\title
-{如何使用 \LaTeX 排版论文}
+\title{如何使用 \LaTeX 排版论文}
 
-\author[陈晟祺] % (optional, use only with lots of authors)
-{陈晟祺\\ \texttt{shengqi.chen@tuna.tsinghua.edu.cn}}
+\author[陈晟祺]{陈晟祺\\ \texttt{shengqi.chen@tuna.tsinghua.edu.cn}}
 
 \institute{清华大学 TUNA 协会}
-% - Use the \inst command only if there are several affiliations.
-% - Keep it simple, no one is interested in your street address.
-
 \date[图书馆专题培训讲座]{2020 年 4 月}
 
 \subject{LaTeX, paper, ThuThesis}
@@ -178,6 +173,37 @@
   \titlepage
 \end{frame}
 
+
+\begin{frame}{关于}
+  \begin{columns}[c]
+    \begin{column}{.7\textwidth}
+      \begin{itemize}
+        \item 最后更新：\texttt{\DTMnow}
+        \item 本幻灯片源码：
+          \begin{itemize}
+            \item \url{https://github.com/tuna/thulib-latex-talk}
+          \end{itemize}
+        \item 本幻灯片参考：
+          \begin{itemize}
+            \item \url{http://github.com/alick/fad-texlive-talk}
+            \item \url{https://github.com/stone-zeng/latex-talk}
+            \item \ThuThesis{} 使用示例文档 v6.0.2
+          \end{itemize}
+        \item 本幻灯片下载（实时更新）：
+          \begin{itemize}
+            \item GitHub Releases \link{https://github.com/tuna/thulib-latex-talk/releases}
+            \item 校内镜像 \link{https://stu.cs.tsinghua.edu.cn/\~harry/latex-talk.pdf}
+          \end{itemize}
+        \item 许可证：CC BY-SA 4.0 Unported \ccbysa
+      \end{itemize}
+    \end{column}
+    \begin{column}{.3\textwidth}
+      \qrcode[hyperlink, height=4cm]{https://stu.cs.tsinghua.edu.cn/\~harry/latex-talk.pdf}
+    \end{column}
+  \end{columns}
+\end{frame}
+
+
 \begin{frame}{目录}
   \tableofcontents
   % You might wish to add the option [pausesections]
@@ -188,27 +214,6 @@
 \include{basis}
 \include{thuthesis}
 \include{summary}
-
-\section*{附录}
-
-
-\begin{frame}
-  \begin{itemize}
-    \item 本幻灯片源码：
-      \begin{itemize}
-        \item \url{https://github.com/tuna/thulib-latex-talk}
-      \end{itemize}
-    \item 本幻灯片参考：
-      \begin{itemize}
-        \item \url{http://github.com/alick/fad-texlive-talk}
-        \item \url{https://github.com/stone-zeng/latex-talk}
-        \item \ThuThesis{} 使用示例文档 v6.0.2
-      \end{itemize}
-    \item 许可证：CC BY-SA 4.0 Unported \ccbysa
-    \item 此幻灯片下载（实时更新） \link{https://stu.cs.tsinghua.edu.cn/\~harry/latex-talk.pdf} \hspace{1em}
-      \qrcode[hyperlink, height=2cm]{https://stu.cs.tsinghua.edu.cn/\~harry/latex-talk.pdf}
-  \end{itemize}
-\end{frame}
 
 \begin{frame}
   \begin{center}

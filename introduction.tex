@@ -333,14 +333,14 @@ fc-cache -fsv
     \item \TeX{}编辑器
       \begin{itemize}
         \item 专用编辑器：TeXworks、\alert{TeXStudio}、TeXmaker、WinEdt 等
-        \item 通用编辑器（加 LaTeX 插件）：Vim、Emacs、VS Code、Sublime、Atom 等
+        \item 通用编辑器（安装 \LaTeX{} 插件）：Vim、Emacs、\alert{VS Code}、Sublime、Atom 等
       \end{itemize}
   \end{itemize}
   \begin{exampleblock}{TeXStudio 配置}
     \begin{itemize}
       \item Options -> Configure TeXstudio
         \begin{itemize}
-          \item Build：Default Compiler 选择 XeLaTeX
+          \item Build：Default Compiler 选择 \XeLaTeX{}
           \item 搜索框输入 Line Number -> Adv. Editor -> 打开行号
         \end{itemize}
     \end{itemize}
@@ -371,14 +371,14 @@ fc-cache -fsv
     % \vspace*{-3mm}
     \begin{itemize}
       \item 发行版没有预装
-      \item 宏包需要更新（尤其是 TeX Live 升级间隔的尴尬时期）
+      \item 宏包需要更新（尤其是 \TL 升级间隔的尴尬时期）
     \end{itemize}
   \end{exampleblock}
   % \vspace*{-3mm}
   \begin{exampleblock}{\TL}
     % \vspace*{-3mm}
     \begin{itemize}
-      \item （Windows）开始菜单里找 Tex Live Manager
+      \item （Windows）开始菜单里找 TeX Live Manager
       \item 设置仓库地址 |tlmgr option repository| {\footnotesize\ttfamily
         https://mirrors.tuna.tsinghua.edu.cn/CTAN/systems/texlive/tlnet}
       \item |tlmgr install <pkgname>| 安装、 |tlmgr update --self --all| 全部更新

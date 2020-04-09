@@ -253,8 +253,8 @@ V = \frac{4}{3}\pi r^3
   \begin{column}{0.45\textwidth}
     \begin{lstlisting}[basicstyle=\ttfamily]
 \begin{align*}
-\symbf{\beta} &= \beta I \\
-\symbf{a} &= a I
+\symbf{\beta} &= \beta \symbf{I} \\
+\symbf{a} &= a \symbf{I}
 \end{align*}
 \end{lstlisting}
 \end{column}\hspace{1em}
@@ -338,7 +338,7 @@ V = \frac{4}{3}\pi r^3
 \end{frame}
 
 
-\begin{frame}[fragile]{交叉引用}
+\begin{frame}[fragile]{交叉引用与插入插图}
   \begin{itemize}
   \item 给对象命名：图片、表格、公式等\\
   |\label{name}|
@@ -366,7 +366,7 @@ V = \frac{4}{3}\pi r^3
   \end{minipage}
 \end{frame}
 
-\begin{frame}[fragile]{交叉引用}
+\begin{frame}[fragile]{交叉引用与插入表格}
   \begin{columns}
   \column{.6\textwidth}
   \begin{lstlisting}
@@ -448,6 +448,14 @@ V = \frac{4}{3}\pi r^3
   \end{itemize}
 \end{frame}
 
+\begin{frame}[fragile]{表格绘制}
+  \begin{itemize}
+    \item 使用 \pkg{booktabs}、\pkg{longtables}、\pkg{multirow} 等宏包
+    \item 手动绘制表格确实比较令人头疼，且较难维护
+    \item 推荐使用在线工具绘制后导出代码：\LaTeX{} Table Generator \link{https://www.tablesgenerator.com/latex_tables}
+  \end{itemize}
+\end{frame}
+
 \begin{frame}[fragile]
   \frametitle{宏包推荐（\textbf{先读文档}后使用）}
   \setlength{\leftmarginii}{1.5em}
@@ -516,7 +524,6 @@ V = \frac{4}{3}\pi r^3
           \item \pkg{algorithm2e}
           \item \pkg{beamer}
           \item \pkg{biblatex}
-          \item \pkg{fancyhdr}
           \item \pkg{listings}
           \item \pkg{mhchem}
           \item \pkg{microtype}
@@ -585,7 +592,7 @@ V = \frac{4}{3}\pi r^3
       \item 编辑 |bare_jrnl.tex| 文件 (英文模板：不支持中文)
       \item 编译
         \begin{itemize}
-          \item 英文文献：XeLaTeX、PDFLaTeX 编译均可
+          \item 英文文献：\XeLaTeX{}、\pdfLaTeX{} 编译均可
         \end{itemize}
     \end{itemize}
   \end{exampleblock}
