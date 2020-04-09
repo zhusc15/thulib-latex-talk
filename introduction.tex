@@ -7,7 +7,6 @@
 \subsection{\TeX 与 \LaTeX}
 
 \begin{frame}[fragile]{\TeX 与 \LaTeX}
-  % TODO: photo of Knuth & Lamport
   \begin{columns}[T]
     \column{.8\textwidth}
     \begin{itemize}
@@ -237,7 +236,7 @@
   \begin{itemize}
     \item 注意!
       \begin{itemize}
-        \item 不能放在带有中文的路径中
+        \item Windows 下不要放在带有中文的路径中
       \end{itemize}
     \item 离线安装镜像 (约3GB大小)
       \begin{itemize}
@@ -271,7 +270,7 @@ install-tl-unx.tar.gz: OK
       \end{itemize}
     \item macOS
       \begin{itemize}
-        \item 需要下载独立的安装包 \url{https://mirrors.tuna.tsinghua.edu.cn/CTAN/systems/mac/mactex/MacTeX.pkg}
+        \item 需要下载独立的安装包 \link{https://mirrors.tuna.tsinghua.edu.cn/CTAN/systems/mac/mactex/MacTeX.pkg}
       \end{itemize}
     \item Linux
       \begin{itemize}
@@ -390,7 +389,7 @@ fc-cache -fsv
     % \vspace*{-3mm}
     \begin{itemize}
       \item 开始菜单里找 CTeX / MiKTeX -> Package Manager
-      \item 在 WinEdt 里 MiKTex Options -> Packages
+      \item 在 WinEdt 里 MiKTeX Options -> Packages
     \end{itemize}
   \end{exampleblock}
 \end{frame}
@@ -415,8 +414,8 @@ fc-cache -fsv
   \frametitle{安装后测试}
 
   \begin{itemize}
-    \item 编辑 \texttt{hello.tex} （Windows 下不要用中文文件名；注意
-      \LaTeX{} 文档对大小写敏感。）
+    \item 编辑 \texttt{hello.tex} （Windows 下不要用中文文件名，注意
+      \LaTeX{} 对文件名大小写敏感）
       \lstset{language=[LaTeX]TeX}
       \begin{card} \begin{lstlisting}[basicstyle=\ttfamily]
 \documentclass{ctexart} % 使用中文适配的 article 文档类
