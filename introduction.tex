@@ -1,5 +1,5 @@
 % !TeX encoding = UTF-8
-% !TeX program = xelatex
+% !TeX program = latexmk
 % !TeX root = latex-talk.tex
 
 \section{简介}
@@ -215,7 +215,7 @@
     \item \TL
       \begin{itemize}
         \item 跨平台：Windows, Linux, macOS (\MacTeX)
-        \item 每年一个新版本发布，当前即将迎来 \TL 2020
+        \item 每年四月发布以年份命名的新版本，当前为 \TL 2020
       \end{itemize}
     \item \MiKTeX
       \begin{itemize}
@@ -226,7 +226,7 @@
       \begin{itemize}
         \item 中科院吴凌云研究员基于 \MiKTeX 开发
         \item 极大的方便了中文 \TeX 用户
-        \item 2012 之后停止开发，不建议再使用
+        \item 2012 年之后停止开发，不建议再使用
       \end{itemize}
   \end{itemize}
 \end{frame}
@@ -293,9 +293,9 @@ sudo chown yourname:yourname /usr/local/texlive
     \item
       添加环境变量到 \nolinkurl{~/.bashrc} 文件：
       \begin{lstlisting}[language=bash]
-export PATH=/usr/local/texlive/2019/bin/x86_64-linux:$PATH
-export MANPATH=/usr/local/texlive/2019/texmf/doc/man:$MANPATH
-export INFOPATH=/usr/local/texlive/2019/texmf/doc/info:$INFOPATH
+export PATH=/usr/local/texlive/2020/bin/x86_64-linux:$PATH
+export MANPATH=/usr/local/texlive/2020/texmf/doc/man:$MANPATH
+export INFOPATH=/usr/local/texlive/2020/texmf/doc/info:$INFOPATH
       \end{lstlisting}
   \item
     打开 \TeXLive 指南中文版 “texlive-zh-cn.pdf”，
@@ -312,7 +312,7 @@ texdoc texlive-zh
   \item
     \XeTeX\ 系统字体配置
     \begin{lstlisting}[language=bash]
-cp /usr/local/texlive/2019/texmf-var/fonts/conf/texlive-fontconfig.conf \
+cp /usr/local/texlive/2020/texmf-var/fonts/conf/texlive-fontconfig.conf \
   /etc/fonts/conf.d/09-texlive.conf
 fc-cache -fsv
     \end{lstlisting}
@@ -371,7 +371,7 @@ fc-cache -fsv
     % \vspace*{-3mm}
     \begin{itemize}
       \item 发行版没有预装
-      \item 宏包需要更新（尤其是 \TL 升级间隔的尴尬时期）
+      \item 宏包需要更新（\TL 升级间隔的尴尬时期，或者宏包有重大变化）
     \end{itemize}
   \end{exampleblock}
   % \vspace*{-3mm}
