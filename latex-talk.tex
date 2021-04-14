@@ -47,7 +47,6 @@
 
 \usepackage{mflogo} % for \MF, \MP
 \usepackage{graphicx}
-\usepackage{listingsutf8}
 \usepackage{xspace}
 \usepackage{amsmath}
 \usepackage{unicode-math}
@@ -61,6 +60,7 @@
 \usepackage{hyperxmp}
 \usepackage{booktabs}
 \usepackage{qrcode}
+\usepackage{listings}
 \usepackage{tipa}
 \usepackage{xpinyin}
 \usepackage{multicol}
@@ -70,9 +70,18 @@
 
 \hypersetup{
   pdfauthor={Harry Chen, Justin Wong, Alick Zhao},
-  pdfcopyright={Copyright (C) 2015-2020 by Alick Zhao, Justin Wong and Harry Chen.
+  pdfcopyright={Copyright (C) 2015-\the\year by Alick Zhao, Justin Wong and Harry Chen.
   Licensed under CC-BY-SA 4.0. Some rights reserved.},
   pdflicenseurl={http://creativecommons.org/licenses/by-sa/4.0/},
+  unicode            = true,
+  psdextra           = true,
+  pdfdisplaydoctitle = true
+}
+
+\pdfstringdefDisableCommands{
+  \let\\\relax
+  \let\quad\relax
+  \let\hspace\@gobble
 }
 
 % From thuthesis user guide
@@ -91,8 +100,8 @@
 % xeCJK conf setup
 \renewcommand\CJKfamilydefault{\CJKsfdefault} % for slides
 
-% \setCJKsansfont{Source Han Sans SC}
-% \setCJKmonofont{Source Han Sans SC}
+\setCJKsansfont{Noto Sans CJK SC}
+\setCJKmonofont{Noto Sans Mono CJK SC}
 
 \renewcommand{\TeX}{\hologo{TeX}}
 \renewcommand{\LaTeX}{\hologo{LaTeX}}
@@ -111,6 +120,8 @@
 \def\TeXLive{\TeX{} Live\xspace}
 \let\TL=\TeXLive
 \newcommand{\ThuThesis}{\textsc{ThuThesis}\xspace}
+\newcommand{\ThuThesisVersion}{7.2.2}
+\newcommand{\TheThesisData}{2021/4/3}
 
 \newcommand\link[1]{\href{#1}{\faLink}}
 \newcommand\pkg[1]{\texttt{#1}}
@@ -123,13 +134,13 @@
 
 \lstset{
   language=[LaTeX]TeX,
-	basicstyle=\ttfamily\footnotesize,
-	tabsize=2,
+  basicstyle=\ttfamily\footnotesize,
+  tabsize=2,
   keywordstyle=\bfseries\ttfamily\color{primaryD},
-	commentstyle=\sl\ttfamily\color[RGB]{100,100,100},
-	stringstyle=\ttfamily\color[RGB]{50,50,50},
-	extendedchars=true,
-	breaklines=true,
+  commentstyle=\sl\ttfamily\color[RGB]{100,100,100},
+  stringstyle=\ttfamily\color[RGB]{50,50,50},
+  extendedchars=true,
+  breaklines=true,
 }
 \lstdefinestyle{style@inline}{
   basicstyle   = \ttfamily,
@@ -142,7 +153,7 @@
 \author[陈晟祺]{\vspace{1em} 陈晟祺\\ \texttt{shengqi.chen@tuna.tsinghua.edu.cn}}
 
 \institute{清华大学 TUNA 协会}
-\date[图书馆专题培训讲座]{2021 年 4 月}
+\date[图书馆专题培训讲座]{\the\year 年 \the\month 月}
 
 \subject{LaTeX, paper, ThuThesis}
 
@@ -187,7 +198,7 @@
           \begin{itemize}
             \item \url{http://github.com/alick/fad-texlive-talk}
             \item \url{https://github.com/stone-zeng/latex-talk}
-            \item \ThuThesis{} 使用示例文档 v7.2.1
+            \item \ThuThesis{} 使用示例文档 v\ThuThesisVersion
           \end{itemize}
         \item 本幻灯片下载（实时更新）：
           \begin{itemize}
@@ -212,7 +223,7 @@
 
 \include{introduction}
 \include{basis}
-\include{thuthesis}
+\include{thesis}
 \include{summary}
 
 \begin{frame}
