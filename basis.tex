@@ -61,8 +61,8 @@
 \begin{frame}[fragile]{文件结构}
   \lstset{language=[LaTeX]TeX}
   \begin{lstlisting}[basicstyle=\ttfamily]
-\documentclass[a4paper]{article}
-% 文档类型，如 article，[]内是选项，如 a4paper
+\documentclass[a4paper]{ctexart}
+% 文档类型，如 ctexart，[]内是选项，如 a4paper
 % 这里开始是导言区
 \usepackage{graphicx} % 引用宏包
 \graphicspath{{fig/}} % 设置图片目录
@@ -241,7 +241,7 @@ V = \frac{4}{3}\pi r^3
 \pkg{unicode-math} 宏包提供了几乎所见即所得的公式输入(\ThuThesis 默认使用）：
 
 \begin{itemize}
-  \item 可直接输入各类符号对应的 Unicode 字符（小心文件编码）：
+  \item 可直接输入各类符号对应的 Unicode 字符（需要使用 UTF-8 编码）：
   \begin{align*}
     𝐹(𝑠) &= ℒ\{𝑓(𝑡)\} = ∫_0^∞ e^{−𝑠𝑡} 𝑓(𝑡) d𝑡 \\
     𝐁 &= 𝜇_0(𝐌 + 𝐇)
@@ -585,7 +585,7 @@ V = \frac{4}{3}\pi r^3
     \begin{itemize}
       \item 获取模板：已随发行版自带
         \begin{itemize}
-          \item 在安装目录 |<prefix>\texlive\2020\texmf-dist\doc\latex\IEEEtran|
+          \item 在安装目录 |<prefix>\texlive\2021\texmf-dist\doc\latex\IEEEtran|
             下找到 |bare_jrnl.tex|
           \item 复制到某个文件夹(比如个人存论文的目录)
         \end{itemize}

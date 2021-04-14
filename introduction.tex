@@ -17,7 +17,7 @@
           \item 最初由 高德纳 (Donald E.~Knuth) 于 1978 年开发
           \item 发音接近“泰赫”，而非“泰克斯”，
             Knuth 对此有\xpinyin{强}{\useTIPAfont qiang3}迫症
-          \item 最新版本为 \TeX\ 3.14159265
+          \item 每 7 年发布新版，最新版本为 \TeX\ 3.141592653（2021年1月）\link{https://tex.stackexchange.com/questions/581118/whats-new-in-tex-version-3-141592653}
           \item 漂亮、美观、稳定、通用
           \item 尤其擅长数学公式排版
         \end{itemize}
@@ -41,6 +41,7 @@
 \end{frame}
 
 \begin{frame}{和 Word 对比}
+  术业有专攻，评价需客观！
   \begin{table}[h]
     \centering
     \rowcolors[]{1}{primaryL}{primaryL!40}
@@ -215,7 +216,7 @@
     \item \TL
       \begin{itemize}
         \item 跨平台：Windows, Linux, macOS (\MacTeX)
-        \item 每年四月发布以年份命名的新版本，当前为 \TL 2020
+        \item 每年四月发布以年份命名的新版本，当前为 \TL 2021
       \end{itemize}
     \item \MiKTeX
       \begin{itemize}
@@ -293,9 +294,9 @@ sudo chown yourname:yourname /usr/local/texlive
     \item
       添加环境变量到 \nolinkurl{~/.bashrc} 文件：
       \begin{lstlisting}[language=bash]
-export PATH=/usr/local/texlive/2020/bin/x86_64-linux:$PATH
-export MANPATH=/usr/local/texlive/2020/texmf/doc/man:$MANPATH
-export INFOPATH=/usr/local/texlive/2020/texmf/doc/info:$INFOPATH
+export PATH=/usr/local/texlive/2021/bin/x86_64-linux:$PATH
+export MANPATH=/usr/local/texlive/2021/texmf/doc/man:$MANPATH
+export INFOPATH=/usr/local/texlive/2021/texmf/doc/info:$INFOPATH
       \end{lstlisting}
   \item
     打开 \TeXLive 指南中文版 “texlive-zh-cn.pdf”，
@@ -312,7 +313,7 @@ texdoc texlive-zh
   \item
     \XeTeX\ 系统字体配置
     \begin{lstlisting}[language=bash]
-cp /usr/local/texlive/2020/texmf-var/fonts/conf/texlive-fontconfig.conf \
+cp /usr/local/texlive/2021/texmf-var/fonts/conf/texlive-fontconfig.conf \
   /etc/fonts/conf.d/09-texlive.conf
 fc-cache -fsv
     \end{lstlisting}
