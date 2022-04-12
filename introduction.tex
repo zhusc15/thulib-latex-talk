@@ -41,7 +41,7 @@
 \end{frame}
 
 \begin{frame}{和 Word 对比}
-  术业有专攻，评价需客观！
+  注：术业有专攻，评价需客观
   \begin{table}[h]
     \centering
     \rowcolors[]{1}{primaryL}{primaryL!40}
@@ -216,7 +216,7 @@
     \item \TL
       \begin{itemize}
         \item 跨平台：Windows, Linux, macOS (\MacTeX)
-        \item 每年四月发布以年份命名的新版本，当前为 \TL 2021
+        \item 每年四月发布以年份命名的新版本，当前为 \TL \TLVersion
       \end{itemize}
     \item \MiKTeX
       \begin{itemize}
@@ -239,7 +239,7 @@
       \begin{itemize}
         \item Windows 下不要放在带有中文的路径中
       \end{itemize}
-    \item 离线安装镜像 (约3GB大小)
+    \item 离线安装镜像（约 4GB 大小）
       \begin{itemize}
         \item {\footnotesize
           \url{https://mirrors.tuna.tsinghua.edu.cn/CTAN/systems/texlive/Images/texlive.iso}}
@@ -294,9 +294,9 @@ sudo chown yourname:yourname /usr/local/texlive
     \item
       添加环境变量到 \nolinkurl{~/.bashrc} 文件：
       \begin{lstlisting}[language=bash]
-export PATH=/usr/local/texlive/2021/bin/x86_64-linux:$PATH
-export MANPATH=/usr/local/texlive/2021/texmf/doc/man:$MANPATH
-export INFOPATH=/usr/local/texlive/2021/texmf/doc/info:$INFOPATH
+export PATH=/usr/local/texlive/current/bin/x86_64-linux:$PATH
+export MANPATH=/usr/local/texlive/current/texmf/doc/man:$MANPATH
+export INFOPATH=/usr/local/texlive/current/texmf/doc/info:$INFOPATH
       \end{lstlisting}
   \item
     打开 \TeXLive 指南中文版 “texlive-zh-cn.pdf”，
@@ -313,7 +313,7 @@ texdoc texlive-zh
   \item
     \XeTeX\ 系统字体配置
     \begin{lstlisting}[language=bash]
-cp /usr/local/texlive/2021/texmf-var/fonts/conf/texlive-fontconfig.conf \
+cp /usr/local/texlive/current/texmf-var/fonts/conf/texlive-fontconfig.conf \
   /etc/fonts/conf.d/09-texlive.conf
 fc-cache -fsv
     \end{lstlisting}
