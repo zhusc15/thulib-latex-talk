@@ -2,8 +2,31 @@
 % !TeX program = latexmk
 % !TeX root = latex-talk.tex
 
-\setCJKsansfont{Noto Sans CJK SC}
-\setCJKmonofont{Noto Sans Mono CJK SC}
+% fonts
+
+% For tipa to work.
+\defaultfontfeatures[TeX Gyre Termes]
+{
+  Extension      = .otf ,
+  UprightFont    = texgyretermes-regular,
+  BoldFont       = texgyretermes-bold,
+  ItalicFont     = texgyretermes-italic,
+  BoldItalicFont = texgyretermes-bolditalic,
+}
+\newfontfamily\useTIPAfont{TeX Gyre Termes}
+
+% xeCJK conf setup
+\renewcommand\CJKfamilydefault{\CJKsfdefault} % for slides
+
+\IfFontExistsTF{Noto Sans CJK SC}{
+    \setCJKsansfont{Noto Sans CJK SC}
+}{}
+\IfFontExistsTF{Noto Sans Mono CJK SC}{
+    \setCJKmonofont{Noto Sans Mono CJK SC}
+}{}
+
+
+% commands
 
 \renewcommand{\TeX}{\hologo{TeX}}
 \renewcommand{\LaTeX}{\hologo{LaTeX}}

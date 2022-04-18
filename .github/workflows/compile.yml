@@ -1,14 +1,19 @@
 name: Build Document
 on: [push]
 jobs:
-  build_latex:
+  build_document:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
+      - name: Patch for Compiling
+        run: |
+          sed -i "s/fontset=ubuntu/fontset=fandol/g" latex-talk.tex
       - name: Compile LaTeX document
         uses: xu-cheng/latex-action@v2
         with:
           root_file: latex-talk.tex
+          latexmk_use_xelatex: true
+          latexmk_shell_escape: true
       - uses: actions/upload-artifact@v2
         with:
           name: talk-slides
