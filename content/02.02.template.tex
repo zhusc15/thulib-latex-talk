@@ -35,19 +35,24 @@
 \end{frame}
 
 \begin{frame}[fragile]{论文排版举例}
-  \begin{exampleblock}{IEEE 期刊论文}
+  \begin{exampleblock}{IEEE 期刊论文（\pkg{IEEEtran} 宏包）}
     \begin{itemize}
-      \item 获取模板：已随发行版自带
+      \item 获取模板
         \begin{itemize}
-          \item 在安装目录 |<prefix>\texlive\2021\texmf-dist\doc\latex\IEEEtran|
-            下找到 |bare_jrnl.tex|
-          \item 复制到某个文件夹(比如个人存论文的目录)
+          \item 发行版自带：将 \TL 安装目录的 |texmf-dist/doc/latex/IEEEtran/bare_jrnl.tex| 复制到某个文件夹并编辑
+          \item 手动下载：IEEE 官网 \link{https://www.ieee.org/conferences/publishing/templates.html}
         \end{itemize}
-      \item 编辑 |bare_jrnl.tex| 文件 (英文模板：不支持中文)
-      \item 编译
+      \item 编译：\XeLaTeX{}、\pdfLaTeX{} 编译均可
+    \end{itemize}
+  \end{exampleblock}
+  \begin{exampleblock}{ACM 期刊 / 会议论文（\pkg{acmart} 宏包）}
+    \begin{itemize}
+      \item 获取模板
         \begin{itemize}
-          \item 英文文献：\XeLaTeX{}、\pdfLaTeX{} 编译均可
+          \item 发行版自带：按需选择 |texmf-dist/doc/latex/acmart/samples| 下的各个样例 |.tex| 文件
+          \item 手动网络下载：ACM 官网 \link{https://www.acm.org/publications/proceedings-template}
         \end{itemize}
+      \item 编译：按样例文件要求选择程序（通常 \pdfLaTeX{}）
     \end{itemize}
   \end{exampleblock}
 \end{frame}

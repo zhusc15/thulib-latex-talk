@@ -91,36 +91,7 @@
 % xeCJK conf setup
 \renewcommand\CJKfamilydefault{\CJKsfdefault} % for slides
 
-\setCJKsansfont{Noto Sans CJK SC}
-\setCJKmonofont{Noto Sans Mono CJK SC}
-
-\renewcommand{\TeX}{\hologo{TeX}}
-\renewcommand{\LaTeX}{\hologo{LaTeX}}
-\newcommand{\BibTeX}{\hologo{BibTeX}}
-\newcommand{\XeTeX}{\hologo{XeTeX}}
-\newcommand{\pdfTeX}{\hologo{pdfTeX}}
-\newcommand{\LuaTeX}{\hologo{LuaTeX}}
-\renewcommand{\CTeX}{C\TeX}
-\newcommand{\MiKTeX}{\hologo{MiKTeX}}
-\newcommand{\MacTeX}{Mac\hologo{TeX}}
-\newcommand{\beamer}{\textsc{beamer}}
-\newcommand{\XeLaTeX}{\hologo{Xe}\kern-.13em\LaTeX{}}
-\newcommand{\pdfLaTeX}{pdf\LaTeX{}}
-\newcommand{\LuaLaTeX}{Lua\LaTeX{}}
-
-\def\TeXLive{\TeX{} Live\xspace}
-\let\TL=\TeXLive
-\newcommand{\TLVersion}{2022}
-\newcommand{\ThuThesis}{\textsc{ThuThesis}\xspace}
-\newcommand{\ThuThesisVersion}{7.2.4}
-\newcommand{\ThuThesisDate}{2022/03/19}
-\newcommand{\ThuThesisRepo}{tuna/thuthesis}
-\newcommand{\ThuThesisLink}{https://github.com/\ThuThesisRepo}
-
-\newcommand{\surveylink}{https://wenjuan.tsinghua.edu.cn/s/77ZZry}
-\newcommand{\thudownloadlink}{https://stu.cs.tsinghua.edu.cn/\~harry/latex-talk.pdf}
-\newcommand{\githubrepo}{tuna/thulib-latex-talk}
-\newcommand{\githublink}{https://github.com/\githubrepo}
+\input{definitions}
 
 \newcommand\link[1]{\href{#1}{\faLink}}
 \newcommand\pkg[1]{\texttt{#1}}
@@ -226,7 +197,7 @@
 \begin{frame}
   \begin{center}
     {\Huge\calligra Thank you!} \\[0.5em]
-    烦请填写调查问卷\\
+    烦请填写调查问卷（雨课堂同学请查看公告）\\
     \url{\surveylink} \\[1em]
     \qrcode[hyperlink, height=3.5cm]{\surveylink}
   \end{center}
